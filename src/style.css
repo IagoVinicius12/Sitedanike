@@ -1,0 +1,212 @@
+header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+  @keyframes fadein{
+    0%{
+        transform:scale(0.0);
+    }
+    100%{
+        transform:scale(1.0);
+    }
+  }
+  .titulo{
+    margin:auto;
+    animation-name: fadein;
+    animation-duration: 1s;
+  }
+  
+  .botao-login {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    margin-left: auto;
+    width: 80px;
+    height: 30px ;
+    border-radius: 20px;
+    background-color: rgb(123, 123, 161);
+  }
+  @keyframes fade-in-black {
+    from {
+      background-color:grey
+    }
+    to {
+      background-color: black;
+    }
+  }
+  
+  body {
+    animation-name: fade-in-black;
+    animation-duration: 3.0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeleft {
+    from {
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes faderight {
+    from {
+      opacity: 0;
+      transform: translateX(150px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadedown {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .janelas {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 150px;
+  }
+  
+  .janela1,
+  .janela2,
+  .janela3 {
+    width: 300px;
+    height: 300px;
+    background-color: grey;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 20%;
+    overflow:hidden;
+  }
+  .janela1{
+    animation-name:fadeleft;
+    animation-duration: 1.5s;
+  }
+  .janela2{
+    animation-name:fadedown;
+    animation-duration: 1.5s;
+  }
+  .janela3{
+    animation-name:faderight;
+    animation-duration: 1.5s;
+  }
+  
+  .janela1:hover,
+  .janela2:hover,
+  .janela3:hover {
+    transform: scale(1.1);
+    background-color: aquamarine;
+  }
+  
+  .airforce,
+  .downshifter,
+  .jordan {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .descricao1,
+  .descricao2,
+  .descricao3 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .botoes1,
+  .botoes2,
+  .botoes3 {
+    margin-top: -40px;
+    left: 30%;
+    position: absolute;
+    justify-content: center;
+  }
+  
+  .botao1-1,
+  .botao1-2,
+  .botao1-3,
+  .botao2-1,
+  .botao2-2,
+  .botao2-3,
+  .botao3-1,
+  .botao3-2,
+  .botao3-3 {
+    margin: 0 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .botao1-1:hover ,
+  .botao2-1:hover ,
+  .botao3-1:hover {
+    background-color: black;
+  }
+  .botao1-3:hover ,
+  .botao2-3:hover ,
+  .botao3-3:hover {
+    background-color:rgb(231, 161, 161);
+  }
+  .botoesdecompra{
+    position:absolute;
+    display:table-row;
+    text-align: center;
+    justify-content:space-around;
+    top: 78%;
+  }
+  @keyframes fadeup {
+    from {
+      opacity: 0;
+      transform:translateY(150px);
+    }
+    to {
+      opacity: 1;
+      transform:translateY(0px);
+    }
+}
+  .compra,
+  .compra1,
+  .compra2{
+    margin:0 113px;
+    animation-name:fadeup ;
+    animation-duration: 0.4s;
+    width: 97px;
+    height: 30px;
+    border-radius: 40%;
+    background-color: rgb(16, 255, 11);
+  }
+  @keyframes growAndRotate {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    100% {
+      transform: scale(1.5) rotate(360deg);
+    }
+  }
+  .compra:hover,
+  .compra1:hover,
+  .compra2:hover{
+    animation-name: growAndRotate;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
